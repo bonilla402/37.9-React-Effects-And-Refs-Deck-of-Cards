@@ -1,11 +1,35 @@
-﻿.board-container {
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #228B22; /* Dark green background for the entire page */
+}
+
+.board-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    height: 100vh; /* Full height of the viewport */
-    width: 100vw;  /* Full width of the viewport */
-    background-color: #228B22; /* Dark green color for the entire background */
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Space between the cards */
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .loading {
@@ -17,28 +41,7 @@
 
 .loading h1 {
     font-size: 48px;
-    color: white;
-}
-
-.buttons-container {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.board {
-    position: relative;
-    width: 80%; /* Board takes 80% of the viewport width */
-    height: 70%; /* Board takes 70% of the viewport height */
-    background-color: #228B22; /* Dark green color for the board */
-    display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
-    gap: 20px; /* Space between the cards */
-    align-content: flex-start;
-    justify-content: flex-start;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: white; /* Set the loading text color to white */
 }
 
 button {
